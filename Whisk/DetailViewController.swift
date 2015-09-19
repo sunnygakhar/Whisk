@@ -5,17 +5,14 @@
 //  Created by Sunny Gakhar on 9/19/15.
 //  Copyright © 2015 Sunny Gakhar. All rights reserved.
 //
+
 import UIKit
+import Alamofire
+
 
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-    @IBOutlet var login_button: UIButton!
-    @IBOutlet var request_button: UIButton!
-    @IBOutlet var logout_button: UIButton!
-    
-    @IBOutlet var name_label: UILabel!
-    @IBOutlet var status_label: UILabel!
 
     var detailItem: AnyObject? {
         didSet {
@@ -36,7 +33,19 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        Alamofire.request(.GET, "https://login.uber.com/oauth/authorize", parameters: ["response_type": "code", "client_id": "6yHr3Lz53gnVtyUDb5YQyu7Uskqgxquj"])     ///Step 1
+        var access_token
+        var parameters = [
+        "client_secret": "",
+        "client_id": "6yHr3Lz53gnVtyUDb5YQyu7Uskqgxquj",
+        "grant_type": access_token,
+        "redirect_uri":42,
+        "code": access_token
+        ]
+        Alamofire.request(.POST, "https://login.uber.com/oauth/token", parameters: parameters).response   //Step 3
+        var headers = ["Authorization": String("BEARER %s", access_token)]
+        Alamofire.request(.GET, "https://api.uber.com/v1/products?latitude=37.7759792&longitude=-122.41823", headers: headers)
+        
         self.configureView()
     }
 
