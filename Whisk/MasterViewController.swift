@@ -6,7 +6,7 @@
 //  Copyright © 2015 Sunny Gakhar. All rights reserved.
 //
 
-import OAuth2
+
 import UIKit
 
 class MasterViewController: UITableViewController {

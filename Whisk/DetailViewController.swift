@@ -5,14 +5,17 @@
 //  Created by Sunny Gakhar on 9/19/15.
 //  Copyright © 2015 Sunny Gakhar. All rights reserved.
 //
-
-import OAuth2
 import UIKit
 
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-
+    @IBOutlet var login_button: UIButton!
+    @IBOutlet var request_button: UIButton!
+    @IBOutlet var logout_button: UIButton!
+    
+    @IBOutlet var name_label: UILabel!
+    @IBOutlet var status_label: UILabel!
 
     var detailItem: AnyObject? {
         didSet {
@@ -33,6 +36,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
         self.configureView()
     }
 

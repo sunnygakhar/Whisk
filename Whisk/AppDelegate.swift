@@ -6,12 +6,12 @@
 //  Copyright © 2015 Sunny Gakhar. All rights reserved.
 //
 
-import OAuth2
+
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
-
+    
     var window: UIWindow?
 
 
