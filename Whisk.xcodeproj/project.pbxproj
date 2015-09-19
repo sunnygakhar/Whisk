@@ -15,6 +15,8 @@
 		BC2F79EF1BADAD0D007B8F00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2F79ED1BADAD0D007B8F00 /* LaunchScreen.storyboard */; };
 		BC2F79FA1BADAD0D007B8F00 /* WhiskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F79F91BADAD0D007B8F00 /* WhiskTests.swift */; };
 		BC2F7A051BADAD0D007B8F00 /* WhiskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F7A041BADAD0D007B8F00 /* WhiskUITests.swift */; };
+		BCB87B6E1BADBA83004BF528 /* OAuth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB87B671BADBA3E004BF528 /* OAuth2.framework */; };
+		BCB87B6F1BADBA8D004BF528 /* OAuth2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCB87B671BADBA3E004BF528 /* OAuth2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,49 @@
 			remoteGlobalIDString = BC2F79DE1BADAD0D007B8F00;
 			remoteInfo = Whisk;
 		};
+		BCB87B641BADBA3E004BF528 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCB87B5E1BADBA3E004BF528 /* OAuth2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEE209471942772800736F1A;
+			remoteInfo = OAuth2;
+		};
+		BCB87B661BADBA3E004BF528 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCB87B5E1BADBA3E004BF528 /* OAuth2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEDB8624193FAAE500C4EEA1;
+			remoteInfo = OAuth2iOS;
+		};
+		BCB87B681BADBA3E004BF528 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCB87B5E1BADBA3E004BF528 /* OAuth2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEE209A219427DFE00736F1A;
+			remoteInfo = OAuth2Tests;
+		};
+		BCB87B6C1BADBA71004BF528 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCB87B5E1BADBA3E004BF528 /* OAuth2.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EEDB8623193FAAE500C4EEA1;
+			remoteInfo = OAuth2iOS;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC2F7A251BADB74F007B8F00 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BCB87B6F1BADBA8D004BF528 /* OAuth2.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BC2F79DF1BADAD0D007B8F00 /* Whisk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whisk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +93,7 @@
 		BC2F7A001BADAD0D007B8F00 /* WhiskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2F7A041BADAD0D007B8F00 /* WhiskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiskUITests.swift; sourceTree = "<group>"; };
 		BC2F7A061BADAD0D007B8F00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCB87B5E1BADBA3E004BF528 /* OAuth2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuth2.xcodeproj; path = OAuth2/OAuth2.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCB87B6E1BADBA83004BF528 /* OAuth2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +125,7 @@
 		BC2F79D61BADAD0D007B8F00 = {
 			isa = PBXGroup;
 			children = (
+				BCB87B5E1BADBA3E004BF528 /* OAuth2.xcodeproj */,
 				BC2F79E11BADAD0D007B8F00 /* Whisk */,
 				BC2F79F81BADAD0D007B8F00 /* WhiskTests */,
 				BC2F7A031BADAD0D007B8F00 /* WhiskUITests */,
@@ -128,6 +175,16 @@
 			path = WhiskUITests;
 			sourceTree = "<group>";
 		};
+		BCB87B5F1BADBA3E004BF528 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCB87B651BADBA3E004BF528 /* OAuth2.framework */,
+				BCB87B671BADBA3E004BF528 /* OAuth2.framework */,
+				BCB87B691BADBA3E004BF528 /* OAuth2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +195,12 @@
 				BC2F79DB1BADAD0D007B8F00 /* Sources */,
 				BC2F79DC1BADAD0D007B8F00 /* Frameworks */,
 				BC2F79DD1BADAD0D007B8F00 /* Resources */,
+				BC2F7A251BADB74F007B8F00 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BCB87B6D1BADBA71004BF528 /* PBXTargetDependency */,
 			);
 			name = Whisk;
 			productName = Whisk;
@@ -217,6 +276,12 @@
 			mainGroup = BC2F79D61BADAD0D007B8F00;
 			productRefGroup = BC2F79E01BADAD0D007B8F00 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BCB87B5F1BADBA3E004BF528 /* Products */;
+					ProjectRef = BCB87B5E1BADBA3E004BF528 /* OAuth2.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BC2F79DE1BADAD0D007B8F00 /* Whisk */,
@@ -225,6 +290,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BCB87B651BADBA3E004BF528 /* OAuth2.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuth2.framework;
+			remoteRef = BCB87B641BADBA3E004BF528 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BCB87B671BADBA3E004BF528 /* OAuth2.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuth2.framework;
+			remoteRef = BCB87B661BADBA3E004BF528 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BCB87B691BADBA3E004BF528 /* OAuth2Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OAuth2Tests.xctest;
+			remoteRef = BCB87B681BADBA3E004BF528 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BC2F79DD1BADAD0D007B8F00 /* Resources */ = {
@@ -292,6 +381,11 @@
 			isa = PBXTargetDependency;
 			target = BC2F79DE1BADAD0D007B8F00 /* Whisk */;
 			targetProxy = BC2F7A011BADAD0D007B8F00 /* PBXContainerItemProxy */;
+		};
+		BCB87B6D1BADBA71004BF528 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuth2iOS;
+			targetProxy = BCB87B6C1BADBA71004BF528 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -402,6 +496,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Whisk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SunnyGakhar.Whisk;
@@ -413,6 +508,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Whisk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SunnyGakhar.Whisk;
@@ -487,6 +583,7 @@
 				BC2F7A0B1BADAD0D007B8F00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC2F7A0C1BADAD0D007B8F00 /* Build configuration list for PBXNativeTarget "WhiskTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +592,7 @@
 				BC2F7A0E1BADAD0D007B8F00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC2F7A0F1BADAD0D007B8F00 /* Build configuration list for PBXNativeTarget "WhiskUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +601,7 @@
 				BC2F7A111BADAD0D007B8F00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
